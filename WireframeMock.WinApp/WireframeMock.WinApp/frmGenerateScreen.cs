@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace WireframeMock.WinApp
 {
+
     public partial class frmGenerateScreen : Form
     {
 
