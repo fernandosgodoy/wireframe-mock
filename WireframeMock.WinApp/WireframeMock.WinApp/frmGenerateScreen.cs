@@ -14,6 +14,7 @@ namespace WireframeMock.WinApp
     {
 
         private const string TITLE = "Wireframe Mock Tool";
+        private IDictionary<string, string> Values { get; set; }
 
         public frmGenerateScreen()
         {
@@ -22,7 +23,15 @@ namespace WireframeMock.WinApp
 
         private void btnInclude_Click(object sender, EventArgs e)
         {
+            if (ValidateForm())
+            {
+                Values.Add(cboType.SelectedValue.ToString(), txtFieldName.Text);
+            }
+        }
 
+        private void FillDataGrid()
+        {
+            dgvFields.DataSource = Values;
         }
 
         private bool ValidateForm()
@@ -48,6 +57,16 @@ namespace WireframeMock.WinApp
         {
             MessageBox.Show(title, msg);
             control.Focus();
+        }
+
+        private void btnGenerateFile_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPathInfo.Text))
+            {
+
+            }
+            else
+                ShowMessageAndFocus("Fill the path where'll be generated the files.", TITLE, txtPathInfo);
         }
 
     }
