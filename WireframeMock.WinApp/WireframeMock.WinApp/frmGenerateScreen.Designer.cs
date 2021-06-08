@@ -136,6 +136,7 @@ namespace WireframeMock.WinApp
             this.btnInclude.TabIndex = 7;
             this.btnInclude.Text = "Include";
             this.btnInclude.UseVisualStyleBackColor = true;
+            this.btnInclude.Click += new System.EventHandler(this.btnInclude_Click);
             // 
             // frmGenerateScreen
             // 
