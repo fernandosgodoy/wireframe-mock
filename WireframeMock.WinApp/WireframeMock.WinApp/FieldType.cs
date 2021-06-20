@@ -8,6 +8,7 @@ namespace WireframeMock.WinApp
 {
     public enum FieldType
     {
+        Escolha = 0,
         Text = 1,
         Select = 2,
         Number = 3,

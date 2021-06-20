@@ -31,19 +31,19 @@ namespace WireframeMock.WinApp
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblFieldName = new System.Windows.Forms.Label();
-            this.txtFieldName = new System.Windows.Forms.TextBox();
-            this.lblType = new System.Windows.Forms.Label();
-            this.cboType = new System.Windows.Forms.ComboBox();
+            this.btnInclude = new System.Windows.Forms.Button();
+            this.chkRequired = new System.Windows.Forms.CheckBox();
             this.txtClass = new System.Windows.Forms.TextBox();
             this.lblClass = new System.Windows.Forms.Label();
-            this.chkRequired = new System.Windows.Forms.CheckBox();
-            this.btnInclude = new System.Windows.Forms.Button();
+            this.cboType = new System.Windows.Forms.ComboBox();
+            this.lblType = new System.Windows.Forms.Label();
+            this.txtFieldName = new System.Windows.Forms.TextBox();
+            this.lblFieldName = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvFields = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblPathInfo = new System.Windows.Forms.Label();
             this.txtPathInfo = new System.Windows.Forms.TextBox();
+            this.lblPathInfo = new System.Windows.Forms.Label();
             this.btnGenerateFile = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -77,38 +77,26 @@ namespace WireframeMock.WinApp
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "(1)";
             // 
-            // lblFieldName
+            // btnInclude
             // 
-            this.lblFieldName.AutoSize = true;
-            this.lblFieldName.Location = new System.Drawing.Point(6, 32);
-            this.lblFieldName.Name = "lblFieldName";
-            this.lblFieldName.Size = new System.Drawing.Size(95, 16);
-            this.lblFieldName.TabIndex = 0;
-            this.lblFieldName.Text = "Field Name(*):";
+            this.btnInclude.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInclude.Location = new System.Drawing.Point(893, 13);
+            this.btnInclude.Name = "btnInclude";
+            this.btnInclude.Size = new System.Drawing.Size(85, 65);
+            this.btnInclude.TabIndex = 7;
+            this.btnInclude.Text = "Include";
+            this.btnInclude.UseVisualStyleBackColor = true;
+            this.btnInclude.Click += new System.EventHandler(this.btnInclude_Click);
             // 
-            // txtFieldName
+            // chkRequired
             // 
-            this.txtFieldName.Location = new System.Drawing.Point(9, 51);
-            this.txtFieldName.Name = "txtFieldName";
-            this.txtFieldName.Size = new System.Drawing.Size(174, 23);
-            this.txtFieldName.TabIndex = 1;
-            // 
-            // lblType
-            // 
-            this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(186, 32);
-            this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(59, 16);
-            this.lblType.TabIndex = 2;
-            this.lblType.Text = "Type(*):";
-            // 
-            // cboType
-            // 
-            this.cboType.FormattingEnabled = true;
-            this.cboType.Location = new System.Drawing.Point(189, 51);
-            this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(148, 24);
-            this.cboType.TabIndex = 3;
+            this.chkRequired.AutoSize = true;
+            this.chkRequired.Location = new System.Drawing.Point(538, 51);
+            this.chkRequired.Name = "chkRequired";
+            this.chkRequired.Size = new System.Drawing.Size(84, 20);
+            this.chkRequired.TabIndex = 6;
+            this.chkRequired.Text = "Required?";
+            this.chkRequired.UseVisualStyleBackColor = true;
             // 
             // txtClass
             // 
@@ -126,26 +114,38 @@ namespace WireframeMock.WinApp
             this.lblClass.TabIndex = 4;
             this.lblClass.Text = "Class(es):";
             // 
-            // chkRequired
+            // cboType
             // 
-            this.chkRequired.AutoSize = true;
-            this.chkRequired.Location = new System.Drawing.Point(538, 51);
-            this.chkRequired.Name = "chkRequired";
-            this.chkRequired.Size = new System.Drawing.Size(84, 20);
-            this.chkRequired.TabIndex = 6;
-            this.chkRequired.Text = "Required?";
-            this.chkRequired.UseVisualStyleBackColor = true;
+            this.cboType.FormattingEnabled = true;
+            this.cboType.Location = new System.Drawing.Point(189, 51);
+            this.cboType.Name = "cboType";
+            this.cboType.Size = new System.Drawing.Size(148, 24);
+            this.cboType.TabIndex = 3;
             // 
-            // btnInclude
+            // lblType
             // 
-            this.btnInclude.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInclude.Location = new System.Drawing.Point(893, 13);
-            this.btnInclude.Name = "btnInclude";
-            this.btnInclude.Size = new System.Drawing.Size(85, 65);
-            this.btnInclude.TabIndex = 7;
-            this.btnInclude.Text = "Include";
-            this.btnInclude.UseVisualStyleBackColor = true;
-            this.btnInclude.Click += new System.EventHandler(this.btnInclude_Click);
+            this.lblType.AutoSize = true;
+            this.lblType.Location = new System.Drawing.Point(186, 32);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(59, 16);
+            this.lblType.TabIndex = 2;
+            this.lblType.Text = "Type(*):";
+            // 
+            // txtFieldName
+            // 
+            this.txtFieldName.Location = new System.Drawing.Point(9, 51);
+            this.txtFieldName.Name = "txtFieldName";
+            this.txtFieldName.Size = new System.Drawing.Size(174, 23);
+            this.txtFieldName.TabIndex = 1;
+            // 
+            // lblFieldName
+            // 
+            this.lblFieldName.AutoSize = true;
+            this.lblFieldName.Location = new System.Drawing.Point(6, 32);
+            this.lblFieldName.Name = "lblFieldName";
+            this.lblFieldName.Size = new System.Drawing.Size(95, 16);
+            this.lblFieldName.TabIndex = 0;
+            this.lblFieldName.Text = "Field Name(*):";
             // 
             // groupBox2
             // 
@@ -176,6 +176,13 @@ namespace WireframeMock.WinApp
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "(3)";
             // 
+            // txtPathInfo
+            // 
+            this.txtPathInfo.Location = new System.Drawing.Point(6, 48);
+            this.txtPathInfo.Name = "txtPathInfo";
+            this.txtPathInfo.Size = new System.Drawing.Size(524, 23);
+            this.txtPathInfo.TabIndex = 1;
+            // 
             // lblPathInfo
             // 
             this.lblPathInfo.AutoSize = true;
@@ -184,13 +191,6 @@ namespace WireframeMock.WinApp
             this.lblPathInfo.Size = new System.Drawing.Size(134, 16);
             this.lblPathInfo.TabIndex = 0;
             this.lblPathInfo.Text = "Path(*): (must exists)";
-            // 
-            // txtPathInfo
-            // 
-            this.txtPathInfo.Location = new System.Drawing.Point(6, 48);
-            this.txtPathInfo.Name = "txtPathInfo";
-            this.txtPathInfo.Size = new System.Drawing.Size(524, 23);
-            this.txtPathInfo.TabIndex = 1;
             // 
             // btnGenerateFile
             // 
@@ -218,6 +218,7 @@ namespace WireframeMock.WinApp
             this.Name = "frmGenerateScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generate Screen";
+            this.Load += new System.EventHandler(this.frmGenerateScreen_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
